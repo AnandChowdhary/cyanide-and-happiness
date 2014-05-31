@@ -2,19 +2,19 @@
 
 	if(isset($_POST["from"]) && isset($_POST["to"])) {
 
-		for($number = $_POST["from"]; $number <= $_POST["to"]; $number++) {
+		for($comic = $_POST["from"]; $comic <= $_POST["to"]; $comic++) {
 
-			$url = "http://explosm.net/comics/" . $number . "/";
+			$location = "http://explosm.net/comics/" . $comic . "/";
 
-			$ch = curl_init();
+			$ch = cURL_init();
 			$timeout = 5;
 
-			curl_setopt($ch, CURLOPT_URL, $url);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+			cURL_setOpt($ch, CURLOPT_URL, $location);
+			cURL_setOpt($ch, CURLOPT_RETURNTRANSFER, 1);
+			cURL_setOpt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
 
-			$html = curl_exec($ch);
-			curl_close($ch);
+			$html = cURL_exec($ch);
+			cURL_close($ch);
 
 			$dom = new DOMDocument();
 			@$dom->loadHTML($html);
