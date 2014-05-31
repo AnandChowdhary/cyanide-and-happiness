@@ -5,4 +5,4 @@ There are 3,500 C&H comics out there. Now you can enjoy all of them from one pla
 
 This webapp fetches all comics from http://explosm.net/comics/ matching between "From" (eg. 3000) and "To" (eg. 3050) which the user enters.
 
-Build using PHP.
+Built using PHP (in five minutes.)
