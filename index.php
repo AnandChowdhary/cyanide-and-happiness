@@ -1,6 +1,8 @@
 <?php
 
 	if(isset($_POST["from"]) && isset($_POST["to"])) {
+		
+		/*go*/
 
 		for($comic = $_POST["from"]; $comic <= $_POST["to"]; $comic++) {
 
